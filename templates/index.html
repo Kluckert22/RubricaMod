@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interpolación de Temperatura</title>
+</head>
+<body>
+    <h1>Interpolación Lineal de Datos de Temperatura</h1>
+    <form id="formulario">
+        <input type="file" id="archivo" name="archivo" accept=".csv" required>
+        <button type="submit">Procesar</button>
+    </form>
+    <canvas id="grafica" width="800" height="400"></canvas>
+    <div id="tabla"></div>
+    <a href="/descargar" target="_blank">📥 Descargar CSV procesado</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
