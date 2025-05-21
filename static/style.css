@@ -1,0 +1,224 @@
+/* Reset y base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fbff; /* blanco muy suave */
+    color: #0a3d62; /* azul oscuro */
+    margin: 0;
+    padding: 30px 15px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Contenedor general para index y resultados */
+.container {
+    background-color: white;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(10, 61, 98, 0.15);
+}
+
+/* Titulos */
+h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #0a3d62;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #2874f0; /* azul más brillante */
+    padding-bottom: 8px;
+    color: #2874f0;
+}
+
+/* Formulario en index */
+form {
+    margin-top: 25px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #2874f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #0a3d62;
+    background-color: #eaf2ff;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 25px auto;
+    display: block;
+}
+
+input[type="file"]:hover {
+    background-color: #d4e4ff;
+}
+
+button {
+    background-color: #2874f0;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(40, 116, 240, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #0f54c3;
+    box-shadow: 0 8px 18px rgba(15, 84, 195, 0.7);
+    outline: none;
+}
+
+/* Resultados */
+
+/* Contenedor de texto + tablas o datos */
+.data-section {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.data-section pre {
+    background-color: #eaf2ff;
+    padding: 15px 18px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    max-height: 250px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #0a3d62;
+}
+
+/* Imagen gráfica */
+.grafica-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(40, 116, 240, 0.35);
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
+/* Botón volver */
+.btn-volver {
+    background-color: #2874f0;
+    color: white;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(40, 116, 240, 0.6);
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover,
+.btn-volver:focus {
+    background-color: #0f54c3;
+    box-shadow: 0 8px 24px rgba(15, 84, 195, 0.8);
+    outline: none;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    button,
+    .btn-volver {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+/* Estilo para las tablas de datos */
+.table-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(40, 116, 240, 0.15);
+    background-color: white;
+    padding: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 300px;
+    color: #0a3d62;
+    background-color: #ffffff;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #d6e4f5;
+}
+
+th {
+    background-color: #2874f0;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f8ff;
+}
+
+/* Responsive para tablas */
+@media (max-width: 768px) {
+    .table-wrapper {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 8px 12px;
+    }
+}
